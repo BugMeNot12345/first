@@ -1,0 +1,30 @@
+{
+  "extends": ["config:base"],
+  "repositories": [
+    {
+      "path": "images.yaml",
+      "depType": "docker",
+      "imageTypes": ["docker"],
+      "files": ["images.yaml"],
+      "schedule": [
+        "after 5pm on Friday"
+      ],
+      "labels": [
+        "docker"
+      ],
+      "automerge": true
+    }
+  ],
+  "updates": {
+    "docker": {
+      "digest": {
+        "enabled": true
+      }
+    }
+  }
+}
+
+
+
+
+
